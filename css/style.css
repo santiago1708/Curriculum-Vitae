@@ -2,24 +2,20 @@
     --fuentePrincipal: "Urbanist", sans-serif;
     --fuenteTitulos: "Baskervville SC", system-ui; 
     --fuenteSubtitulo:  "Comfortaa", sans-serif;
-    
-    
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; /* 1rem = 10px */
     box-sizing: border-box;
 }
 body {
-    font-size: 16px; /*1 rem = 10p*/
-    background-image: linear-gradient(to bottom, #fdfefe 0%, #d0d3d4 60%) ;
+    font-size: 1.6rem; /* 16px */
+    background-image: linear-gradient(to bottom, #f2f3f4 0%, #a6acaf 40%);
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
-
 
 /* Utilidades */
 
@@ -31,14 +27,17 @@ body {
     border-radius: 3rem;
 }
 
+.minwidth100 {
+    min-width: 100rem;
+}
+
 /* Header */
 
 .header {
-    border-bottom: thin black solid;
+    border-bottom: .19rem black solid;
 }
 
-
-.header__titulo{
+.header__titulo {
     font-family: var(--fuenteSubtitulo);
     text-transform: uppercase;
     text-align: center;
@@ -57,75 +56,175 @@ body {
 .grid {
     display: grid;
     grid-template-areas: 
-    'primero segundo segundo segundo segundo'
-    ;
+    'primero segundo segundo segundo';
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-areas: 
+        'primero'
+        'segundo';
+    }
+    .minwidth100 {
+        min-width: 0;
+    }
+    .contenedor {
+        width: 95%;
+        max-width: 40rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-areas: 
+        'primero'
+        'segundo';
+    }
+    .minwidth100{
+        min-width: auto;
+    }
 }
 
 /* Body: Primer Section */
 
 .section-primero {
     grid-area: primero;
-    background-color: silver;
+    background-color: #5d6d7e;
 }
 
-.section__imagen{
+.section__imagen {
     display: grid;
     place-items: center;
 }
 
-.section__imagen img{
-    width: 35rem;
+.section__imagen img {
+    width: 100%;
+    max-width: 35rem;
     border-radius: 50%;
+    border: .3rem solid #d5dbdb;
+}
+
+.section__informacion {
+    color: #d5dbdb;
 }
 
 .section__informacion h2 {
     font-family: var(--fuenteTitulos);
-    padding-left: 5rem;
-    font-size: 3.5rem;
+    padding-left: 2rem;
+    font-size: 3rem;
+    text-align: center;
 }
 
 .section__contacto {
     display: flex;
     justify-content: space-evenly;
 }
+@media (max-width: 768px) {
+    .section__contacto{
+        justify-content: center;
+        gap: 5rem;
+    }
+}
+
+.section__contacto img {
+    width: 5rem;
+    height: auto;
+}
 
 .section__habilidades .habilidades {
     font-family: var(--fuentePrincipal);
-    font-size: 2.5rem;
-    margin: 0 5rem;
+    font-size: 2rem;
+    margin: 0 2rem;
     font-weight: 300;
-    
 }
 
 .habilidades li {
     margin: 1rem 0;
 }
 
+@media (max-width: 768px) {
+    .section__informacion h2 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
+
 /* Body: Segunda Section */
 
 .contenedor-segundo {
     grid-area: segundo;
-    background-color: silver;
+    background-color: #5d6d7e;
 }
 
 .navegacion-principal {
     display: flex;
     justify-content: center;
-    background-color: rgba(252, 252, 252, 0.219);
+    background-color: #2e4053 ;
     gap: 1rem;
     border-radius: 1rem;
-    width: 30%;
+    width: 30%; /* Ajustado para dispositivos móviles */
     margin-left: auto;
 }
 
-.navegacion-principal a{
-    text-decoration: none;
-    color: black;
-    font-family: var(--fuenteSubtitulo);
-    padding: 2rem;
-    transition: .5s ease-in-out;
+@media (max-width: 480px) {
+    .navegacion-principal {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
-.navegacion-principal a:hover{
-    color: red;
+
+.navegacion-principal a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--fuenteSubtitulo);
+    padding: 1rem;
+    transition: .3s ease-in-out;
+    font-size: 1.6rem; /* Ajustado para dispositivos móviles */
+}
+
+.navegacion-principal a:hover, .navegacion-principal a.active {
+    color: yellowgreen;
+    font-weight: 900;
+}
+
+.griddosfr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.educacion ul, .conocimientos ul,.contenidoResumen ul  {
+    margin-left: 2rem;
+    font-family: var(--fuenteSubtitulo);
+}
+
+@media (max-width: 480px) {
+    .griddosfr{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .educacion ul, .conocimientos ul, .contenidoResumen ul {
+        margin-left: auto;
+        line-height: 1.5;
+    }
+}
+
+.conocimientos li {
+    margin: .5rem;
+}
+
+.contenidoSobreMi, .contenidoResumen {
+    color: #d5dbdb;
+}
+
+.contenidoSobreMi h3, .contenidoResumen h3 {
+    font-family: var(--fuenteTitulos);
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+
+.contenidoSobreMi p {
+    font-family: var(--fuenteSubtitulo);
+    line-height: 1.5;
 }
 

@@ -6,94 +6,67 @@
     <title>Courriculum Vitae</title>
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Comfortaa:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css" >
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="" alt="Foto personal">
-            <h1>Santiago Vela <span>Ingeniero en Sistemas</span></h1>
-        </nav>
+    <header class="header">
+        <h1 class="header__titulo">David Santiago Vela Tique<span class="subtitulo">Portafolio</span></h1>
     </header>
     <main>
-        <div>
-            <article>
-                <div>
-                    <h2>Contacto</h2>
-                    <div>
-                        <img src="img/whatsapp.png" alt="Logo whatsapp">
-                        <p>+57 3212256266</p>
-                    </div>
-                    <div>
-                        <img src="img/linkedin.png" alt="Logo linkedin">
-                        <p>www.linkedin.com/in/santiago-vela-tique</p>
-                    </div>
-                    <div>
-                        <img src="img/correo-electronico.png" alt="Logo correo-electronico">
-                        <p>vela123tique@gmail.com</p>
-                    </div>
+        <div class="grid">
+            <section class="contenedor section-primero">
+                <div class="section__imagen">
+                    <img src="img/FotoPersonal.jpg" alt="Foto Personal">
                 </div>
-
-                <div>
-                    <h2>Habilidades</h2>
-                    <div>
-                        <ul>
+                <div class="section__informacion">
+                    <h2>Contacto</h2>
+                    <div class="section__contacto">
+                        <a href="https://api.whatsapp.com/send?phone=573212256266&text=Hola, ¡Estoy interesado en tu trabajo!" target="_blank">
+                            <img src="img/whatsapp.png" alt="Logo whatsapp">
+                        </a>
+                        <a href="https://www.linkedin.com/in/santiago-vela-tique/" target="_blank">
+                            <img src="img/linkedin.png" alt="Logo linkedin">
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vela123tique@gmail.com&su=Estoy%20interesad@%20en%20tu%20trabajo!&body=Me%20gustaria%20trabajar%20contigo!" target="_blank">
+                            <img src="img/correo-electronico.png" alt="Logo correo-electronico">
+                        </a>
+                    </div>
+                    <div class="section__habilidades">
+                        <h2>Habilidades</h2>
+                        <ul class="habilidades">
+                            <li>Comunicacion asertica</li>
                             <li>Trabajo en equipo</li>
                             <li>Resolucion de problemas</li>
-                            <li>Comunicacion asertiva</li>
+                            <li>Trabajo bajo presion</li>
                         </ul>
                     </div>
                 </div>
-
-                <div>
-                    <h2>Conocimientos</h2>
-                    <div>
-                        <ul>
-                            <li>Java</li>
-                            <li>C++</li>
-                            <li>TyScript</li>
-                            <li>React</li>
-                            <li>JavaScript</li>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                        </ul>
+            </section>
+            <section class="contenedor contenedor-segundo">
+                <header>
+                    <nav class="navegacion-principal">
+                        <a href="" class="sobremi">Sobre mi</a>
+                        <a href="" class="resumen">Resumen</a>
+                    </nav>
+                </header>
+                <body> 
+                    <div id="contenido_sobreMi">
+                        <p>hola</p>
                     </div>
-                </div>
-
-                <div>
-                    <h2>Educacion</h2>
-                    <div>
-                        <ul>
-                            <li>Ingneieria de Sistemas</li>
-                            <p>Universidad de la Amazonia <span>2021 - Actualidad</span></p>
-                            <li>Tecnico en Sistemas</li>
-                            <p>Instituto Tecnico Industrial <span>2019 - 2021</span></p>
-                        </ul>
+                    <div id="contenido_resumen">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti odit quia tempora eligendi nisi dignissimos minus provident quibusdam quasi? Possimus inventore animi sequi quidem? Earum reiciendis aperiam laborum natus fuga!</p>
                     </div>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <h2>Acerca de Mi</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem nihil delectus nesciunt odio! Quas culpa eius, dolor pariatur consectetur architecto temporibus et, molestias ab aliquam adipisci fugiat autem porro voluptatem.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptate error distinctio quam et similique sunt, temporibus dolor, necessitatibus blanditiis exercitationem qui vitae repudiandae doloribus aliquam fugit saepe beatae consectetur?</p>
-                </div>
-                <div>
-                    <h2>Experiencia Laboral</h2>
-                    <div>
-                        <ul>
-                            <li>Desarrollador Full Stack</li>
-                            <p>Empresa A <span>2020 - Actualidad</span></p>
-                            <li>Desarrollador </li>
-                            <p>Empresa B <span>2018 - 2020</span></p>
-                        </ul>
-                </div>
-            </article>
+                </body>
+            </section>
         </div>
     </main>
     <footer>
 
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>

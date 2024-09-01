@@ -1,0 +1,131 @@
+:root {
+    --fuentePrincipal: "Urbanist", sans-serif;
+    --fuenteTitulos: "Baskervville SC", system-ui; 
+    --fuenteSubtitulo:  "Comfortaa", sans-serif;
+    
+    
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px; /*1 rem = 10p*/
+    background-image: linear-gradient(to bottom, #fdfefe 0%, #d0d3d4 60%) ;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+/* Utilidades */
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 3rem;
+}
+
+/* Header */
+
+.header {
+    border-bottom: thin black solid;
+}
+
+
+.header__titulo{
+    font-family: var(--fuenteSubtitulo);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5rem;
+    margin: 3rem auto;
+}
+
+.header .subtitulo {
+    font-size: 2.5rem;
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Body */
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    'primero segundo segundo segundo segundo'
+    ;
+}
+
+/* Body: Primer Section */
+
+.section-primero {
+    grid-area: primero;
+    background-color: silver;
+}
+
+.section__imagen{
+    display: grid;
+    place-items: center;
+}
+
+.section__imagen img{
+    width: 35rem;
+    border-radius: 50%;
+}
+
+.section__informacion h2 {
+    font-family: var(--fuenteTitulos);
+    padding-left: 5rem;
+    font-size: 3.5rem;
+}
+
+.section__contacto {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section__habilidades .habilidades {
+    font-family: var(--fuentePrincipal);
+    font-size: 2.5rem;
+    margin: 0 5rem;
+    font-weight: 300;
+    
+}
+
+.habilidades li {
+    margin: 1rem 0;
+}
+
+/* Body: Segunda Section */
+
+.contenedor-segundo {
+    grid-area: segundo;
+    background-color: silver;
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(252, 252, 252, 0.219);
+    gap: 1rem;
+    border-radius: 1rem;
+    width: 30%;
+    margin-left: auto;
+}
+
+.navegacion-principal a{
+    text-decoration: none;
+    color: black;
+    font-family: var(--fuenteSubtitulo);
+    padding: 2rem;
+    transition: .5s ease-in-out;
+}
+.navegacion-principal a:hover{
+    color: red;
+}
+
